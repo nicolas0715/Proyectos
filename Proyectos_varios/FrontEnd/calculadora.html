@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<style>
+    *{
+        font-family: 'Fraunces','serif';
+        color: #fff;
+    }
+    body{
+        margin: 0;
+        background-color: #BD702D;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .calculadora{
+        display: grid;
+        grid-template-columns: repeat(4, 75px);
+        grid-template-rows: 160px repeat(5, 75px);
+        background-color: #F08E39;
+        padding: 15px;
+        border-radius: 32px;
+        box-shadow: 15px 10px 0px 5px #00000033;
+    }
+    button{
+        cursor: pointer;
+        margin: 5px;
+        padding: 0px;
+        border-radius: 32px;
+        font-size: 1.5em;
+        border: none;
+        background-color: #F2B783;
+        box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #00ffc11f;
+    }
+    button:active{
+        background-color: #BD6F02;
+    }
+    button:focus{
+        outline: none;
+    }
+    .display{
+        grid-column: 1 / -1;
+        padding: 16px;
+        display: flex;
+        margin: 10px 10px 20px;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: #70431B;
+        border-radius: 32px;
+        text-align: right;
+        justify-content: space-between;
+        word-break: break-all;
+        box-shadow: 0px 0px 0px 10px #00000033;
+    }
+    .col-2{
+        grid-column: span 2;
+    }
+    #valor-actual{
+        font-size: 1.5em;
+        color: #F08D02;
+    }
+    #valor-anterior{
+        font-size: 2em;
+        color: #F08D02;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="calculadora">
+            <div class="display">
+                <div id="valor-anterior">356</div>
+                <div id="valor-actual">34</div>
+            </div>
+            <button class="col-2">C</button>
+            <button>&larr;</button>
+            <button class="operador">%</button>
+            <button class="numero">7</button>
+            <button class="numero">8</button>
+            <button class="numero">9</button>
+            <button class="operador">X</button>
+            <button class="numero">4</button>
+            <button class="numero">5</button>
+            <button class="numero">6</button>
+            <button class="operador">-</button>
+            <button class="numero">1</button>
+            <button class="numero">2</button>
+            <button class="numero">3</button>
+            <button class="operador">+</button>
+            <button class="col-2 numero">0</button>
+            <button class="numero">.</button>
+            <button class="operador">=</button>
+        </div>
+    </div>
+</body>
+</html>

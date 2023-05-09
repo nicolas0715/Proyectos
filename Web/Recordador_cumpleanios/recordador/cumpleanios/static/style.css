@@ -1,0 +1,195 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: coral;
+}
+.main_index{
+    height: calc(100% - 60px - 40px);
+}
+nav{
+    display: block;
+    align-items: end;
+    height: 60px;
+    width: 100%;
+    box-shadow: 0px 2px 4px tomato;
+}
+.menu li{
+    margin: 8px 0px 8px 10px;
+}
+.menu li a{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: pink;
+    padding: 5px;
+    border-radius: 0px 10px 10px 0px;
+}
+.saludo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    text-align: center;  
+    height: 100%;
+}
+.saludo h1{
+    font-size: 60px;
+}
+.saludo h2{
+    font-size: 40px;
+    color: red;
+}
+footer{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0px -2px 4px tomato;
+}
+/*Menu Hamburguesa*/
+.menu{
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.menu-hamburguesa{
+    margin: 5px 0px 10px 10px;
+}
+#x{
+    display: none;
+}
+#hamburguesa:checked ~ #icono > .menu-hamburguesa{
+    display: none;
+}
+#hamburguesa:checked ~ #icono > #x{
+    display: block;
+    margin: 0px 0px 0px 10px;
+}
+#hamburguesa:checked ~ #x{
+    display: block;
+}
+#hamburguesa{
+    display: none;
+}
+#hamburguesa:checked ~ .menu{
+    display: flex;
+    flex-direction: column;
+}
+.menu-hamburguesa:hover{
+    transform: scale(1.1);
+}
+#x:hover{
+    transform: scale(1.1);
+}
+.menu li a:hover{
+    color: pink;
+    background-color: red;
+}
+
+
+
+/*---------------------------------------------------------------------------------------------------------*/
+
+.formulario{
+    width: 60%;
+    height: calc(100% - 60px - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: 2px 0px 4px tomato, -2px 0px 4px tomato;;
+}
+
+.formulario label{
+    margin: 40px auto 10px;
+    font-size: 25px;
+}
+
+.formulario input{
+    width: 100px;
+    background-color: tomato;
+    border: 1px solid red;
+}
+
+.formulario button{
+    margin: 50px auto;
+    width: 200px;
+    padding: 3px;
+    background-color: tomato;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+.main_vermas{
+    height: calc(100% - 60px - 40px);
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.columna{
+    width: 33%;
+    box-shadow: 2px 0px 4px tomato, -2px 0px 4px tomato;
+}
+
+li{
+    list-style-type: none;
+    margin: 10px 0px;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+
+.main_buscar{
+    height: calc(100% - 60px - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin: 0px auto;
+}
+
+.main_buscar form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+}
+
+.main_buscar form select{
+    width: 200px;
+    background-color: tomato;
+    border: 1px solid red;
+}
+
+.main_buscar form input{
+    width: 200px;
+    margin: 10px 0px;
+    background-color: tomato;
+    border: 1px solid red;
+}
+
+.main_buscar form button{
+    width: 250px;
+    padding: 3px;
+    background-color: tomato;
+}
+
+#busqueda li{
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    {% block title %}<title>Cumpleanito</title>{% endblock %}
+</head>
+<body>
+    <nav>
+        <input type="checkbox" name="hamburguesa" id="hamburguesa">
+        <label for="hamburguesa" id="icono">
+            <img class='menu-hamburguesa' alt='menu-hamburguesa' src="{% static 'icons8-menu-rounded-50.png' %}">
+            <img src="{% static 'icons8-close-50.png' %}" alt="cierrre del menu hamburguesa" id='x'>
+        </label>
+        <ul class='menu'>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/agregar">Agregar</a></li>
+            <li><a href="/ver_mas">Ver Mas</a></li>
+            <li><a href="/buscar">Buscar</a></li>
+        </ul>
+    </nav>
+    {% block main %}
+    <main class='main_index'>
+        <div class='saludo'>
+            <h1>No te olvides de saludar a</h1>
+            <h2>{{ cumple|first }}</h2> 
+            <h1>que hoy cumple anios!</h1>
+        </div>
+    </main>
+    {% endblock %}
+    <footer>
+        Fecha Actual: {{ctx}}
+    </footer>
+
+<script src='{% static "index.js" %}'></script>
+</body>
+</html>

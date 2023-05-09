@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}<title>Agregar cumpleanito</title>{% endblock %}
+</head>
+<body>
+    {% block main %}
+    <form class='formulario' action="" method='POST'> {% csrf_token %}
+        <h1>Agregar Cumpleaniero</h1>
+        <label for="nombre">Ingrese el nombre</label>
+        <input type="text" name='nombre'>
+        <label for="apellido">Ingrese el apellido</label>
+        <input type="text" name='apellido'>
+        <label for="fecha_nacimiento">Ingrese la fecha de Nacimiento</label>
+        <input type="date" name='fecha_nacimiento'>
+        <button type='submit'>Agregar</button>
+        <div id="mensaje">{{msj}}</div>
+    </form>
+    {% endblock %}
+</body>
+</html>
